@@ -63,3 +63,4 @@ Từ trên ta thấy được partition /dev/sdb1 đã được tạo
 > The partition table has been altered!<br>
 > Calling ioctl() to re-read partition table.<br>
 > Syncing disks.<br>
+
