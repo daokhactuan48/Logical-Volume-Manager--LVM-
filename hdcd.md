@@ -18,7 +18,7 @@ Hướng Dẫn Tạo LVM
 **Chú ý:** Bạn lên đặt tên của volume group là vg[ten] hoặc lv[ten] để dễ nhận dạng hơn
 
 **B1: Trước khi cài đăt bạn lên kiểm tra xem có những hard drives nào bằng lệnh sau: #lsblk**
-<i style="color:red">lsblk</i>
+<p>He named his car <i style="color:red">The lightning</i>, because it was very fast.</p>
 > root@controller:~# <i style="color:red">lsblk</i> <br>
 > NAME   MAJ:MIN RM   SIZE RO TYPE MOUNTPOINT <br>
 > sda      8:0    0    40G  0 disk <br>
