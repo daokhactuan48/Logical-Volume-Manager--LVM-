@@ -123,7 +123,7 @@ Sử dụng câu lệnh sau để tao physical volume: #pvcreate /dev/sdb1 và #
 
 **B7: Tạo logical volume: #lvcreate**
 
-> root@controller:~# <b>lvcreate -L 3GB -n lvdata vgdemo</b>
+> root@controller:~# <b>lvcreate -L 3GB -n lvdata vgdemo</br>
 >   Logical volume "lvdata" created
 
 -L:  Chỉ ra dung lượng của logical volume <br>
