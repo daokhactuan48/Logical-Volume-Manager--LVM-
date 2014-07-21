@@ -127,5 +127,66 @@ Sử dụng câu lệnh sau để tao physical volume: #pvcreate /dev/sdb1 và #
 > root@controller:~# lvcreate -L 3GB -n lvdata vgdemo
 >   Logical volume "lvdata" created
 
--L:  Chỉ ra dung lượng của logical volume
--n: Tên của logical volume
+-L:  Chỉ ra dung lượng của logical volume <br>
+-n: Tên của logical volume <br>
+
+B8: Kiểm tra xem logical volume đã có chưa: lvdisplay
+
+> root@controller:~# lvdisplay
+>   --- Logical volume ---
+>   LV Name                /dev/vgdemo/lvdata
+>   VG Name                vgdemo
+>   LV UUID                OzvRiA-nX19-5YNc-pdlI-HS0X-Gmuj-ehVdFE
+>   LV Write Access        read/write
+>   LV Status              available
+>   # open                 0
+>   LV Size                3.00 GiB
+>   Current LE             768
+>   Segments               1
+>   Allocation             inherit
+>   Read ahead sectors     auto
+>   - currently set to     256
+>  Block device           252:0
+
+**B9: Format  và mount cho logical volume:**
+
+Format: #mkfs.ext3 /dev/vgdemo/lvdata
+
+> root@controller:~# mkfs.ext3 /dev/vgdemo/lvdata
+> mke2fs 1.42 (29-Nov-2011)
+> Filesystem label=
+> OS type: Linux
+> Block size=4096 (log=2)
+> Fragment size=4096 (log=2)
+> Stride=0 blocks, Stripe width=0 blocks
+> 196608 inodes, 786432 blocks
+> 39321 blocks (5.00%) reserved for the super user
+> First data block=0
+> Maximum filesystem blocks=805306368
+> 24 block groups
+> 32768 blocks per group, 32768 fragments per group
+> 8192 inodes per group
+> Superblock backups stored on blocks:
+>         32768, 98304, 163840, 229376, 294912
+> Allocating group tables: done
+> Writing inode tables: done
+> Creating journal (16384 blocks):
+> done
+> Writing superblocks and filesystem accounting information: done
+
+Mount:
+Tạo cây thư mục như sau:
+Mkdir /partition
+Mkdir /partition/data
+Sau khi tạo thư mục ta mount /dev/vgdemo/lvdata vào /partition/data bằng cách thực hiện lệnh sau:
+ #mount /dev/vgdemo/lvdata /partition/data
+
+Sau khi thực hiện 2 lệnh sau ta thực hiện kiểm tra xem /dev/vgdemo/lvdata đã được mount và format đúng chưa bằng các lệnh sau: df -T
+> Filesystem                Type     1K-blocks    Used Available Use% Mounted on
+> /dev/sda2                 ext4      19091584 1019992  17095056   6% /
+> udev                      devtmpfs    238172      12    238160   1% /dev
+> tmpfs                     tmpfs        99120     252     98868   1% /run
+> none                      tmpfs         5120       0      5120   0% /run/lock
+> none                      tmpfs       247796       0    247796   0% /run/shm
+> /dev/sda4                 xfs       10682368   32928  10649440   1% /srv/node/sda4
+> /dev/mapper/vgdemo-lvdata ext3       3096336   70212   2868840   3% /partition/data
