@@ -101,26 +101,26 @@ Sử dụng câu lệnh sau để tao physical volume: #pvcreate /dev/sdb1 và #
 **B6: Kiểm tra xem volume group đã có chưa bằng lệnh sau: #vgdisplay**
 
 > root@controller:~# vgdisplay
->   --- Volume group ---
->   VG Name               vgdemo
->   System ID
->   Format                lvm2
->   Metadata Areas        1
->   Metadata Sequence No  1
->   VG Access             read/write
->   VG Status             resizable
->   MAX LV                0
->   Cur LV                0
->   Open LV               0
->   Max PV                0
->   Cur PV                1
->   Act PV                1
->   VG Size               5.00 GiB
->   PE Size               4.00 MiB
->   Total PE              1279
->   Alloc PE / Size       0 / 0
->   Free  PE / Size       1279 / 5.00 GiB
->   VG UUID               vlL9ON-E63w-MdSZ-fxjJ-YO5U-L1cF-UrydJO
+>   --- Volume group ---<br>
+>   VG Name               vgdemo<br>
+>   System ID<br>
+>   Format                lvm2<br>
+>   Metadata Areas        1<br>
+>   Metadata Sequence No  1<br>
+>   VG Access             read/write<br>
+>   VG Status             resizable<br>
+>   MAX LV                0<br>
+>   Cur LV                0<br>
+>   Open LV               0<br>
+>   Max PV                0<br>
+>   Cur PV                1<br>
+>   Act PV                1<br>
+>   VG Size               5.00 GiB<br>
+>   PE Size               4.00 MiB<br>
+>   Total PE              1279<br>
+>   Alloc PE / Size       0 / 0<br>
+>   Free  PE / Size       1279 / 5.00 GiB<br>
+>   VG UUID               vlL9ON-E63w-MdSZ-fxjJ-YO5U-L1cF-UrydJO<br>
 
 **B7: Tạo logical volume: #lvcreate**
 
@@ -132,21 +132,21 @@ Sử dụng câu lệnh sau để tao physical volume: #pvcreate /dev/sdb1 và #
 
 **B8: Kiểm tra xem logical volume đã có chưa: #lvdisplay**
 
-> root@controller:~# lvdisplay
->   --- Logical volume ---
->   LV Name                /dev/vgdemo/lvdata
->   VG Name                vgdemo
->   LV UUID                OzvRiA-nX19-5YNc-pdlI-HS0X-Gmuj-ehVdFE
->   LV Write Access        read/write
->   LV Status              available
->   # open                 0
->   LV Size                3.00 GiB
->   Current LE             768
->   Segments               1
->   Allocation             inherit
->   Read ahead sectors     auto
->   - currently set to     256
->  Block device           252:0
+> root@controller:~# lvdisplay<br>
+>   --- Logical volume ---<br>
+>   LV Name                /dev/vgdemo/lvdata<br>
+>   VG Name                vgdemo<br>
+>   LV UUID                OzvRiA-nX19-5YNc-pdlI-HS0X-Gmuj-ehVdFE<br>
+>   LV Write Access        read/write<br>
+>   LV Status              available<br>
+>   # open                 0<br>
+>   LV Size                3.00 GiB<br>
+>   Current LE             768<br>
+>   Segments               1<br>
+>   Allocation             inherit<br>
+>   Read ahead sectors     auto<br>
+>   - currently set to     256<br>
+>  Block device           252:0<br>
 
 **B9: Format  và mount cho logical volume:**
 
