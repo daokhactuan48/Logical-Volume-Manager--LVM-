@@ -1,5 +1,3 @@
-Logical-Volume-Manager--LVM-
-============================
 
 Tổng Quan Logical Volume Manager (LVM)
 =====================================
