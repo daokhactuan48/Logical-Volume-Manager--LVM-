@@ -32,7 +32,7 @@ Hướng Dẫn Tạo LVM
 
 Sau khi nhập vào #lsblk bạn sẽ thấy được 2 hard drives đã có là: sdb và sdc
 
-**B2:  Tạo partition bằng cậu lệnh fdisk /dev/sdb**
+**B2:  Tạo partition bằng cậu lệnh: #fdisk /dev/sdb**
 
 1.	Tạo partition trong /dev/sdb:
 > Command (m for help): n  <br>
@@ -67,7 +67,7 @@ Sử dụng câu lệnh sau để tao physical volume: #pvcreate /dev/sdb1 và #
 > root@controller:~# pvcreate /dev/sdc1<br>
 >    Physical volume "/dev/sdc1" successfully created<br>
 
-**B4: Kiểm tra xem physical volume đã có chưa bằng lệnh sau: pvdisplay**
+**B4: Kiểm tra xem physical volume đã có chưa bằng lệnh sau: #pvdisplay**
 
 > root@controller:~# pvdisplay
 >   "/dev/sdb1" is a new physical volume of "5.00 GiB"<br>
@@ -93,12 +93,12 @@ Sử dụng câu lệnh sau để tao physical volume: #pvcreate /dev/sdb1 và #
 >   Allocated PE          0<br>
 >   PV UUID               oSuTNT-dX3U-grfr-UKOL-6Gyo-32s3-XsUTIc<br>
 
-**B5: Tạo volume group với câu lệnh: vgcreate {tên volume group} { physical volume}**
+**B5: Tạo volume group với câu lệnh: #vgcreate {tên volume group} { physical volume}**
 
 > root@controller:~# vgcreate vgdemo /dev/sdb1 <br>
 >   Volume group "vgdemo" successfully created <br>
 
-**B6: Kiểm tra xem volume group đã có chưa bằng lệnh sau: vgdisplay**
+**B6: Kiểm tra xem volume group đã có chưa bằng lệnh sau: #vgdisplay**
 
 > root@controller:~# vgdisplay
 >   --- Volume group ---
@@ -122,7 +122,7 @@ Sử dụng câu lệnh sau để tao physical volume: #pvcreate /dev/sdb1 và #
 >   Free  PE / Size       1279 / 5.00 GiB
 >   VG UUID               vlL9ON-E63w-MdSZ-fxjJ-YO5U-L1cF-UrydJO
 
-**B7: Tạo logical volume:**
+**B7: Tạo logical volume: #lvcreate**
 
 > root@controller:~# lvcreate -L 3GB -n lvdata vgdemo
 >   Logical volume "lvdata" created
@@ -130,7 +130,7 @@ Sử dụng câu lệnh sau để tao physical volume: #pvcreate /dev/sdb1 và #
 -L:  Chỉ ra dung lượng của logical volume <br>
 -n: Tên của logical volume <br>
 
-B8: Kiểm tra xem logical volume đã có chưa: lvdisplay
+**B8: Kiểm tra xem logical volume đã có chưa: #lvdisplay**
 
 > root@controller:~# lvdisplay
 >   --- Logical volume ---
@@ -194,5 +194,5 @@ Chú ý: Khi bạn mount /dev/vgdemo/lvdata /partition/data thì chỉ được 
  #vi /etc/fstab chèn dòng sau vào file:<br>
 
 > /dev/vgdemo/lvdata       /partition/data  ext3  defaults 0 0 <br> 
-> Sau đó lưu lại là được. Bạn có thể restart để test lại chức năng.<br>
+> Sau đó lưu lại. Bạn có thể restart để kiểm tra thông số.<br>
 
