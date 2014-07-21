@@ -53,13 +53,12 @@ Sau khi nhập vào #lsblk bạn sẽ thấy được 2 hard drives đã có là
 > Sector size (logical/physical): 512 bytes / 512 bytes <br>
 > I/O size (minimum/optimal): 512 bytes / 512 bytes <br>
 > Disk identifier: 0xc8fe9a22 <br>
->    Device Boot      Start         End      Blocks   Id  System <br>
-> /dev/sdb1            2048    10487807     5242880   83  Linux <br>
+> Device Boot      Start         End      Blocks   Id  System <br>
+> /dev/sdb1        2048     10487807    5242880   83  Linux <br>
 
 Từ trên ta thấy được partition /dev/sdb1 đã được tạo
 
 3.	Lưu lại quá trình tạo partition
-
 > Command (m for help): w <br>
 > The partition table has been altered!<br>
 > Calling ioctl() to re-read partition table.<br>
