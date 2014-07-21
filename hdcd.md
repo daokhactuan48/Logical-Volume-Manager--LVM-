@@ -41,5 +41,24 @@ Sau khi nhập vào #lsblk bạn sẽ thấy được 2 hard drives đã có là
 > Select (default p): p<br>
 > Partition number (1-4, default 1): 1<br>
 > First sector (2048-20971519, default 2048):<br>
-> Using default value 2048> <br>
+> Using default value 2048 <br>
 > Last sector, +sectors or +size{K,M,G} (2048-20971519, default 20971519): +5G<br>
+
+2.	Kiểm tra xem partition đã được tạo chưa 
+> Command (m for help): p <br>
+> Disk /dev/sdb: 10.7 GB, 10737418240 bytes <br>
+> 255 heads, 63 sectors/track, 1305 cylinders, total 20971520 sectors <br>
+> Units = sectors of 1 * 512 = 512 bytes <br>
+> Sector size (logical/physical): 512 bytes / 512 bytes <br>
+> I/O size (minimum/optimal): 512 bytes / 512 bytes <br>
+> Disk identifier: 0xc8fe9a22 <br>
+>    Device Boot      Start         End      Blocks   Id  System <br>
+> /dev/sdb1            2048    10487807     5242880   83  Linux <br>
+
+Từ trên ta thấy được partition /dev/sdb1 đã được tạo
+
+**3.	Lưu lại quá trình tạo partition**
+> Command (m for help): w <br>
+> The partition table has been altered!<br>
+> Calling ioctl() to re-read partition table.<br>
+> Syncing disks.<br>
