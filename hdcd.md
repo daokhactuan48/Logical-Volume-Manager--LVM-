@@ -98,3 +98,34 @@ Sử dụng câu lệnh sau để tao physical volume: #pvcreate /dev/sdb1 và #
 > root@controller:~# vgcreate vgdemo /dev/sdb1 <br>
 >   Volume group "vgdemo" successfully created <br>
 
+**B6: Kiểm tra xem volume group đã có chưa bằng lệnh sau: vgdisplay**
+
+> root@controller:~# vgdisplay
+>   --- Volume group ---
+>   VG Name               vgdemo
+>   System ID
+>   Format                lvm2
+>   Metadata Areas        1
+>   Metadata Sequence No  1
+>   VG Access             read/write
+>   VG Status             resizable
+>   MAX LV                0
+>   Cur LV                0
+>   Open LV               0
+>   Max PV                0
+>   Cur PV                1
+>   Act PV                1
+>   VG Size               5.00 GiB
+>   PE Size               4.00 MiB
+>   Total PE              1279
+>   Alloc PE / Size       0 / 0
+>   Free  PE / Size       1279 / 5.00 GiB
+>   VG UUID               vlL9ON-E63w-MdSZ-fxjJ-YO5U-L1cF-UrydJO
+
+**B7: Tạo logical volume:**
+
+> root@controller:~# lvcreate -L 3GB -n lvdata vgdemo
+>   Logical volume "lvdata" created
+
+-L:  Chỉ ra dung lượng của logical volume
+-n: Tên của logical volume
