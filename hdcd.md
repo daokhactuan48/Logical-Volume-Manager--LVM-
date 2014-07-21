@@ -196,3 +196,25 @@ Chú ý: Khi bạn mount /dev/vgdemo/lvdata /partition/data thì chỉ được 
 > /dev/vgdemo/lvdata       /partition/data  ext3  defaults 0 0 <br> 
 > Sau đó lưu lại. Bạn có thể restart để kiểm tra thông số.<br>
 
+##III. Xóa logical volume, volume group, physical volume
+**1. Xóa Logical Volumes**
+
+B1: Umount file system
+ #Umount /dev/vgdemo/lvdata<br>
+ Sau khi umount được file system ta kiểm tra xem đã umount được chưa bằng lệnh sau: #df -T
+ 
+B2: Xóa logical volumes
+ #lvremove /dev/vgdemo/lvdata<br> 
+ Sau khi xóa logical volume ta kiểm tra bằng lệnh sau: #lvdisplay<br>
+
+**2. Xóa volume groups**
+
+ #vgremove /dev/vgdemo<br>
+ Kiểm tra lại xem volume groups đã được xóa chưa: #vgdisplay<br>
+
+**3. Xóa physical volume**
+ #pvremove /dev/sdb1
+ Kiểm tra lại xem physical volumes đã được xóa chưa: #vgdisplay<br>
+
+
+
