@@ -24,4 +24,5 @@
 > - B3: Mở rộng Volumes Group bằng cách gộp các physical volumes
 > - B4: Mở rộng Logical Volumes
 > - B5: Kiểm tra
+
 ####IV. Hướng dẫn sử dụng tạo LVM
