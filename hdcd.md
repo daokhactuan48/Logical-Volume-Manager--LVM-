@@ -19,7 +19,7 @@ Hướng Dẫn Tạo LVM
 
 **B1: Trước khi cài đăt bạn lên kiểm tra xem có những hard drives nào bằng lệnh sau: #lsblk**
 
-> root@controller:~# lsblk <br>
+> root@controller:~# <b color="red">lsblk</b> <br>
 > NAME   MAJ:MIN RM   SIZE RO TYPE MOUNTPOINT <br>
 > sda      8:0    0    40G  0 disk <br>
 > ├─sda1   8:1    0   1.9G  0 part [SWAP] <br>
@@ -180,7 +180,7 @@ Mkdir /partition/data<br>
 Sau khi tạo thư mục ta mount /dev/vgdemo/lvdata vào /partition/data bằng cách thực hiện lệnh sau:<br>
  #mount /dev/vgdemo/lvdata /partition/data
 
-Sau khi thực hiện 2 lệnh sau ta thực hiện kiểm tra xem /dev/vgdemo/lvdata đã được mount và format đúng chưa bằng các lệnh sau: df -T<br>
+Sau khi thực hiện 2 lệnh sau ta thực hiện kiểm tra xem /dev/vgdemo/lvdata đã được mount và format đúng chưa bằng các lệnh sau: #df -T<br>
 > Filesystem                Type     1K-blocks    Used Available Use% Mounted on<br>
 > /dev/sda2                 ext4      19091584 1019992  17095056   6% /<br>
 > udev                      devtmpfs    238172      12    238160   1% /dev<br>
