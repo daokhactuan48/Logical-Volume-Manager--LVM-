@@ -56,11 +56,7 @@ Sau khi nhập vào #lsblk bạn sẽ thấy được 2 hard drives đã có là
 > Device Boot      Start         End      Blocks   Id  System <br>
 > /dev/sdb1        2048     10487807    5242880   83  Linux <br>
 
-Từ trên ta thấy được partition /dev/sdb1 đã được tạo
+Từ trên ta thấy được partition /dev/sdb1 đã được tạo. Sau đó ấn w để lưu lại quá trình tạo partition. Làm tương tự đối với hard drives sdc
 
-3.	Lưu lại quá trình tạo partition <br>
-> Command (m for help): w <br>
-> The partition table has been altered!<br>
-> Calling ioctl() to re-read partition table.<br>
-> Syncing disks.<br>
+**B3: Tạo physical volume là /dev/sdb1 và /dev/sdc1**
 
