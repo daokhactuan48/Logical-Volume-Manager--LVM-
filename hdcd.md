@@ -6,4 +6,4 @@ Hướng Dẫn Tạo LVM
 > - Add thêm 2 ổ cứng có dung lượng 10GB vào máy ảo
 **Mô tả bằng hình ảnh**
 <br>
-<p aling="center"><img src="http://i.imgur.com/KXfTUdL.png"></p>
+<p aling="center"><img src="http://i.imgur.com/9rNADx4.png></p>
