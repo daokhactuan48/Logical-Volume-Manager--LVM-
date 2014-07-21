@@ -213,6 +213,7 @@ B2: Xóa logical volumes
  Kiểm tra lại xem volume groups đã được xóa chưa: #vgdisplay<br>
 
 **3. Xóa physical volume**
+
  #pvremove /dev/sdb1
  Kiểm tra lại xem physical volumes đã được xóa chưa: #vgdisplay<br>
 
