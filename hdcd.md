@@ -32,7 +32,7 @@ Hướng Dẫn Tạo LVM
 
 Sau khi nhập vào #lsblk bạn sẽ thấy được 2 hard drives đã có là: sdb và sdc
 
-**B2:  Tạo partition bằng cậu lệnh fdisk /dev/sdb và fdisk /dev/sdc**
+**B2:  Tạo partition bằng cậu lệnh fdisk /dev/sdb**
 
 1.	Tạo partition trong /dev/sdb:
 > Command (m for help): n  <br>
@@ -59,4 +59,12 @@ Sau khi nhập vào #lsblk bạn sẽ thấy được 2 hard drives đã có là
 Từ trên ta thấy được partition /dev/sdb1 đã được tạo. Sau đó ấn w để lưu lại quá trình tạo partition. Làm tương tự đối với hard drives sdc
 
 **B3: Tạo physical volume là /dev/sdb1 và /dev/sdc1**
+
+Sử dụng câu lệnh sau để tao physical volume: #pvcreate /dev/sdb1 và #pvcreate /dev/sdc1
+
+> root@controller:~# pvcreate /dev/sdb1<br>
+>   Physical volume "/dev/sdb1" successfully created<br>
+> root@controller:~# pvcreate /dev/sdc1<br>
+>    Physical volume "/dev/sdc1" successfully created<br>
+
 
