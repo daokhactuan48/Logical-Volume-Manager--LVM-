@@ -67,4 +67,28 @@ Sử dụng câu lệnh sau để tao physical volume: #pvcreate /dev/sdb1 và #
 > root@controller:~# pvcreate /dev/sdc1<br>
 >    Physical volume "/dev/sdc1" successfully created<br>
 
+**B4: Kiểm tra xem physical volume đã có chưa bằng lệnh sau: pvdisplay**
 
+> root@controller:~# pvdisplay
+>   "/dev/sdb1" is a new physical volume of "5.00 GiB"<br>
+>   --- NEW Physical volume ---<br>
+>   PV Name               /dev/sdb1<br>
+>   VG Name<br>
+>   PV Size               5.00 GiB<br>
+>   Allocatable           NO<br>
+>   PE Size               0<br>
+>   Total PE              0<br>
+>   Free PE               0<br>
+>   Allocated PE          0<br>
+>   PV UUID               wdzUgF-s77s-vanU-zqh7-TEcc-H3I5-n4nob0 <br>
+>   "/dev/sdc1" is a new physical volume of "5.00 GiB"<br>
+>   --- NEW Physical volume ---<br>
+>   PV Name               /dev/sdc1<br>
+>   VG Name<br>
+>   PV Size               5.00 GiB<br>
+>   Allocatable           NO<br>
+>   PE Size               0<br>
+>   Total PE              0<br>
+>   Free PE               0<br>
+>   Allocated PE          0<br>
+>   PV UUID               oSuTNT-dX3U-grfr-UKOL-6Gyo-32s3-XsUTIc<br>
