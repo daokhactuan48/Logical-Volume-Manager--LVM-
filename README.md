@@ -19,8 +19,10 @@
 
 
 ####III.Mở rông hoặc giảm dung lượng logical volumes trong LVM
-B1: Thêm Hard Drives
-B2: Phân vùng tạo physical Volumes
-B3: Mở rộng Volumes Group bằng cách gộp các physical volumes
-B4: Mở rộng Logical Volumes
-B5: Kiểm tra
+<ul>
+<li>B1: Thêm Hard Drives</li>
+<li>B2: Phân vùng tạo physical Volumes</li>
+<li>B3: Mở rộng Volumes Group bằng cách gộp các physical volumes</li>
+<li>B4: Mở rộng Logical Volumes</li>
+<li>B5: Kiểm tra</li>
+</ul>
