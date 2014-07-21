@@ -26,5 +26,5 @@ II. Các thành phần LVM
 
 **Mô hình của LVM:**
 <br>
-<img src="http://i.imgur.com/BqJ7ntQ.png" height="60%" wight="60%" align="center">
+<img src="http://i.imgur.com/BqJ7ntQ.png">
 
