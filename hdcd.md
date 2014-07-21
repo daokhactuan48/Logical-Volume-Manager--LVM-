@@ -13,7 +13,7 @@ Hướng Dẫn Tạo LVM
 ##II. Các bước tiến hành 
 **Trong bài này mình sẽ đặt tên các volume group, logical volume được như sau:**
 > - Volume group: vgdemo
-> - logical volume: lvdat
+> - logical volume: lvdata
 
 **Chú ý:** Bạn lên đặt tên của volume group là vg[ten] hoặc lv[ten] để dễ nhận dạng hơn
 
