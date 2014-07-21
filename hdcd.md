@@ -34,18 +34,18 @@ Sau khi nhập vào #lsblk bạn sẽ thấy được 2 hard drives đã có là
 **B2:  Tạo partition bằng cậu lệnh: #fdisk /dev/sdb**
 
 1.	Tạo partition trong /dev/sdb:
-> Command (m for help): <b style='color:red'>n</b>  <br>
+> Command (m for help): <b>n</b>  <br>
 > Partition type: <br>
 >    p   primary (0 primary, 0 extended, 4 free)<br>
 >    e   extended<br>
-> Select (default p): p<br>
+> Select (default p): <b>p</b><br>
 > Partition number (1-4, default 1): 1<br>
 > First sector (2048-20971519, default 2048):<br>
 > Using default value 2048 <br>
 > Last sector, +sectors or +size{K,M,G} (2048-20971519, default 20971519): +5G<br>
 
 2.	Kiểm tra xem partition đã được tạo chưa 
-> Command (m for help): p <br>
+> Command (m for help): <b>p</b> <br>
 > Disk /dev/sdb: 10.7 GB, 10737418240 bytes <br>
 > 255 heads, 63 sectors/track, 1305 cylinders, total 20971520 sectors <br>
 > Units = sectors of 1 * 512 = 512 bytes <br>
@@ -61,14 +61,14 @@ Từ trên ta thấy được partition /dev/sdb1 đã được tạo. Sau đó 
 
 Sử dụng câu lệnh sau để tao physical volume: #pvcreate /dev/sdb1 và #pvcreate /dev/sdc1
 
-> root@controller:~# pvcreate /dev/sdb1<br>
+> root@controller:~# <b>pvcreate /dev/sdb1</b><br>
 >   Physical volume "/dev/sdb1" successfully created<br>
 > root@controller:~# pvcreate /dev/sdc1<br>
 >    Physical volume "/dev/sdc1" successfully created<br>
 
 **B4: Kiểm tra xem physical volume đã có chưa bằng lệnh sau: #pvdisplay**
 
-> root@controller:~# pvdisplay
+> root@controller:~#<b> pvdisplay</b>
 >   "/dev/sdb1" is a new physical volume of "5.00 GiB"<br>
 >   --- NEW Physical volume ---<br>
 >   PV Name               /dev/sdb1<br>
@@ -94,12 +94,12 @@ Sử dụng câu lệnh sau để tao physical volume: #pvcreate /dev/sdb1 và #
 
 **B5: Tạo volume group với câu lệnh: #vgcreate {tên volume group} { physical volume}**
 
-> root@controller:~# vgcreate vgdemo /dev/sdb1 <br>
+> root@controller:~# <b>vgcreate vgdemo /dev/sdb1 </b><br>
 >   Volume group "vgdemo" successfully created <br>
 
 **B6: Kiểm tra xem volume group đã có chưa bằng lệnh sau: #vgdisplay**
 
-> root@controller:~# vgdisplay
+> root@controller:~# <b>vgdisplay</b>
 >   --- Volume group ---<br>
 >   VG Name               vgdemo<br>
 >   System ID<br>
@@ -123,7 +123,7 @@ Sử dụng câu lệnh sau để tao physical volume: #pvcreate /dev/sdb1 và #
 
 **B7: Tạo logical volume: #lvcreate**
 
-> root@controller:~# lvcreate -L 3GB -n lvdata vgdemo
+> root@controller:~# <b>lvcreate -L 3GB -n lvdata vgdemo</b>
 >   Logical volume "lvdata" created
 
 -L:  Chỉ ra dung lượng của logical volume <br>
@@ -131,7 +131,7 @@ Sử dụng câu lệnh sau để tao physical volume: #pvcreate /dev/sdb1 và #
 
 **B8: Kiểm tra xem logical volume đã có chưa: #lvdisplay**
 
-> root@controller:~# lvdisplay<br>
+> root@controller:~# <b>lvdisplay</b><br>
 >   --- Logical volume ---<br>
 >   LV Name                /dev/vgdemo/lvdata<br>
 >   VG Name                vgdemo<br>
@@ -151,7 +151,7 @@ Sử dụng câu lệnh sau để tao physical volume: #pvcreate /dev/sdb1 và #
 
 Format: #mkfs.ext3 /dev/vgdemo/lvdata
 
-> root@controller:~# mkfs.ext3 /dev/vgdemo/lvdata<br>
+> root@controller:~# <b>mkfs.ext3 /dev/vgdemo/lvdata</b><br>
 > mke2fs 1.42 (29-Nov-2011)<br>
 > OS type: Linux<br>
 > Block size=4096 (log=2)<br>
