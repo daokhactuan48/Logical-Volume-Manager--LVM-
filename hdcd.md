@@ -10,8 +10,7 @@ Hướng Dẫn Tạo LVM
 <br>
 <p align="center"><img src="http://i.imgur.com/9rNADx4.png></p>
 
-
-##II. Các bước tiến hành 
+ Các bước tiến hành 
 **Trong bài này mình sẽ đặt tên các volume group, logical volume được như sau:**
 > - Volume group: vgdemo
 > - logical volume: lvdat
