@@ -33,6 +33,7 @@ Hướng Dẫn Tạo LVM
 Sau khi nhập vào #lsblk bạn sẽ thấy được 2 hard drives đã có là: sdb và sdc
 
 **B2:  Tạo partition bằng cậu lệnh fdisk /dev/sdb và fdisk /dev/sdc**
+
 1.	Tạo partition trong /dev/sdb:
 > Command (m for help): n  <br>
 > Partition type: <br>
@@ -57,7 +58,7 @@ Sau khi nhập vào #lsblk bạn sẽ thấy được 2 hard drives đã có là
 
 Từ trên ta thấy được partition /dev/sdb1 đã được tạo
 
-**3.	Lưu lại quá trình tạo partition**
+3.	Lưu lại quá trình tạo partition
 > Command (m for help): w <br>
 > The partition table has been altered!<br>
 > Calling ioctl() to re-read partition table.<br>
