@@ -19,12 +19,13 @@ I. Giới Thiệu
 II. Các thành phần LVM
 ----------------------
 
+**Mô hình của LVM:**
+<br>
+<p align="center"><img src="http://i.imgur.com/BqJ7ntQ.png"></p>
+
 **Một số thuật ngữ sử dụng trong LVM: **
 > - **Physical volumes** : là những đĩa vật lý hoặc phân vùng đĩa của bạn chẳng hạn như /dev/sda, /dev/sda1, /dev/sdb.... Khi bạn muốn sử dụng chỉ cần mount vào thôi. Đối với việc sử dụng LVM chúng ta có thể kết hợp nhiều physical volumes thành volume groups.
 > - **Volume groups** : là một nhóm bao gồm các physycal volumes thực và dung lượng này được sử dụng để tạo ra các logical volumes, trong đó bạn có thể làm được những điều như sau : tạo, thay đổi kích thước, gỡ bỏ và sử dụng. Bạn có thể xem volume group như 1 “phân vùng ảo.
 > - **Logical volumes**  :là những volumes cuối cùng sau khi mount vào hệ thống của mình, bạn có thể thêm vào, gỡ bỏ và thay đổi kích thước một cách nhanh chóng. Kể từ khi chúng chứa trong các volume group bạn có thể làm cho nó lơn hơn bất kỳ physical volume đơn lẻ mà bạn muốn. (ví dụ bạn có 4 ổ đĩa mỗi ổ 5GB khi bạn kết hợp nó lại thành 1 volume group 20GB, và bạn có thể tạo ra 2 logical volumes mỗi disk 10GB)
 
-**Mô hình của LVM:**
-<br>
-<p align="center"><img src="http://i.imgur.com/BqJ7ntQ.png"></p>
 
