@@ -30,4 +30,6 @@ Hướng Dẫn Tạo LVM
 > sdc      8:32   0    10G  0 disk <br>
 > sr0     11:0    1   665M  0 rom <br>
 
+Sau khi nhập vào #lsblk bạn sẽ thấy được 2 hard drives đã có là: sdb và sdc
 
+**B2:  Tạo partition bằng cậu lệnh fdisk /dev/sdb và fdisk /dev/sdc**
