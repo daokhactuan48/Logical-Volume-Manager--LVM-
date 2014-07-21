@@ -25,4 +25,4 @@
 > - B4: Mở rộng Logical Volumes
 > - B5: Kiểm tra
 
-####IV. Hướng dẫn sử dụng tạo LVM
+####IV. Hướng dẫn tạo LVM
