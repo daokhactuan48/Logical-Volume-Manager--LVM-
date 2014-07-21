@@ -34,7 +34,7 @@ Sau khi nhập vào #lsblk bạn sẽ thấy được 2 hard drives đã có là
 **B2:  Tạo partition bằng cậu lệnh: #fdisk /dev/sdb**
 
 1.	Tạo partition trong /dev/sdb:
-> Command (m for help): n  <br>
+> Command (m for help): <b style='color:red'>n</b>  <br>
 > Partition type: <br>
 >    p   primary (0 primary, 0 extended, 4 free)<br>
 >    e   extended<br>
