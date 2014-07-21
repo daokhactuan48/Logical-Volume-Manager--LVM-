@@ -19,7 +19,7 @@ Hướng Dẫn Tạo LVM
 
 **B1: Trước khi cài đăt bạn lên kiểm tra xem có những hard drives nào bằng lệnh sau: #lsblk**
 
-> root@controller:~# <b style="color:red">lsblk</b> <br>
+> root@controller:~# <i style="color:red">lsblk</i> <br>
 > NAME   MAJ:MIN RM   SIZE RO TYPE MOUNTPOINT <br>
 > sda      8:0    0    40G  0 disk <br>
 > ├─sda1   8:1    0   1.9G  0 part [SWAP] <br>
