@@ -14,9 +14,11 @@ Hướng Dẫn Tạo LVM
 **Trong bài này mình sẽ đặt tên các volume group, logical volume được như sau:**
 > - Volume group: vgdemo
 > - logical volume: lvdat
+
 **Chú ý:** Bạn lên đặt tên vủa volume group là vg[ten] hoặc lv[ten] để dễ nhận dạng hơn
 
 B1: Trước khi cài đăt bạn lên kiểm tra xem có những hard drives nào bằng lệnh sau: #lsblk
+
 > root@controller:~# lsblk
 > NAME   MAJ:MIN RM   SIZE RO TYPE MOUNTPOINT
 > sda      8:0    0    40G  0 disk
