@@ -18,4 +18,9 @@
 > - **Logical volumes**  :là những volumes cuối cùng sau khi mount vào hệ thống của mình, bạn có thể thêm vào, gỡ bỏ và thay đổi kích thước một cách nhanh chóng. Kể từ khi chúng chứa trong các volume group bạn có thể làm cho nó lơn hơn bất kỳ physical volume đơn lẻ mà bạn muốn. (ví dụ bạn có 4 ổ đĩa mỗi ổ 5GB khi bạn kết hợp nó lại thành 1 volume group 20GB, và bạn có thể tạo ra 2 logical volumes mỗi disk 10GB)
 
 
-####III.Mở rông hoặc giảm dung lượng logical volume trong LVM
+####III.Mở rông hoặc giảm dung lượng logical volumes trong LVM
+B1: Thêm Hard Drives
+B2: Phân vùng tạo physical Volumes
+B3: Mở rộng Volumes Group bằng cách gộp các physical volumes
+B4: Mở rộng Logical Volumes
+B5: Kiểm tra
