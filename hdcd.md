@@ -92,3 +92,9 @@ Sử dụng câu lệnh sau để tao physical volume: #pvcreate /dev/sdb1 và #
 >   Free PE               0<br>
 >   Allocated PE          0<br>
 >   PV UUID               oSuTNT-dX3U-grfr-UKOL-6Gyo-32s3-XsUTIc<br>
+
+**B5: Tạo volume group với câu lệnh: vgcreate {tên volume group} { physical volume}**
+
+> root@controller:~# vgcreate vgdemo /dev/sdb1 <br>
+>   Volume group "vgdemo" successfully created <br>
+
