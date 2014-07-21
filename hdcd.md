@@ -152,41 +152,47 @@ B8: Kiểm tra xem logical volume đã có chưa: lvdisplay
 
 Format: #mkfs.ext3 /dev/vgdemo/lvdata
 
-> root@controller:~# mkfs.ext3 /dev/vgdemo/lvdata
-> mke2fs 1.42 (29-Nov-2011)
-> Filesystem label=
-> OS type: Linux
-> Block size=4096 (log=2)
-> Fragment size=4096 (log=2)
-> Stride=0 blocks, Stripe width=0 blocks
-> 196608 inodes, 786432 blocks
-> 39321 blocks (5.00%) reserved for the super user
-> First data block=0
-> Maximum filesystem blocks=805306368
-> 24 block groups
-> 32768 blocks per group, 32768 fragments per group
-> 8192 inodes per group
-> Superblock backups stored on blocks:
->         32768, 98304, 163840, 229376, 294912
-> Allocating group tables: done
-> Writing inode tables: done
-> Creating journal (16384 blocks):
-> done
-> Writing superblocks and filesystem accounting information: done
+> root@controller:~# mkfs.ext3 /dev/vgdemo/lvdata<br>
+> mke2fs 1.42 (29-Nov-2011)<br>
+> OS type: Linux<br>
+> Block size=4096 (log=2)<br>
+> Fragment size=4096 (log=2)<br>
+> Stride=0 blocks, Stripe width=0 blocks<br>
+> 196608 inodes, 786432 blocks<br>
+> 39321 blocks (5.00%) reserved for the super user<br>
+> First data block=0<br>
+> Maximum filesystem blocks=805306368<br>
+> 24 block groups<br>
+> 32768 blocks per group, 32768 fragments per group<br>
+> 8192 inodes per group<br>
+> Superblock backups stored on blocks:<br>
+>         32768, 98304, 163840, 229376, 294912<br>
+> Allocating group tables: done<br>
+> Writing inode tables: done<br>
+> Creating journal (16384 blocks):<br>
+> done<br>
+> Writing superblocks and filesystem accounting information: done<br>
 
-Mount:
-Tạo cây thư mục như sau:
-Mkdir /partition
-Mkdir /partition/data
-Sau khi tạo thư mục ta mount /dev/vgdemo/lvdata vào /partition/data bằng cách thực hiện lệnh sau:
+Mount:<br>
+Tạo cây thư mục như sau:<br>
+Mkdir /partition<br>
+Mkdir /partition/data<br>
+Sau khi tạo thư mục ta mount /dev/vgdemo/lvdata vào /partition/data bằng cách thực hiện lệnh sau:<br>
  #mount /dev/vgdemo/lvdata /partition/data
 
-Sau khi thực hiện 2 lệnh sau ta thực hiện kiểm tra xem /dev/vgdemo/lvdata đã được mount và format đúng chưa bằng các lệnh sau: df -T
-> Filesystem                Type     1K-blocks    Used Available Use% Mounted on
-> /dev/sda2                 ext4      19091584 1019992  17095056   6% /
-> udev                      devtmpfs    238172      12    238160   1% /dev
-> tmpfs                     tmpfs        99120     252     98868   1% /run
-> none                      tmpfs         5120       0      5120   0% /run/lock
-> none                      tmpfs       247796       0    247796   0% /run/shm
-> /dev/sda4                 xfs       10682368   32928  10649440   1% /srv/node/sda4
-> /dev/mapper/vgdemo-lvdata ext3       3096336   70212   2868840   3% /partition/data
+Sau khi thực hiện 2 lệnh sau ta thực hiện kiểm tra xem /dev/vgdemo/lvdata đã được mount và format đúng chưa bằng các lệnh sau: df -T<br>
+> Filesystem                Type     1K-blocks    Used Available Use% Mounted on<br>
+> /dev/sda2                 ext4      19091584 1019992  17095056   6% /<br>
+> udev                      devtmpfs    238172      12    238160   1% /dev<br>
+> tmpfs                     tmpfs        99120     252     98868   1% /run<br>
+> none                      tmpfs         5120       0      5120   0% /run/lock<br>
+> none                      tmpfs       247796       0    247796   0% /run/shm<br>
+> /dev/sda4                 xfs       10682368   32928  10649440   1% /srv/node/sda4<br>
+> /dev/mapper/vgdemo-lvdata ext3       3096336   70212   2868840   3% /partition/data<br>
+
+Chú ý: Khi bạn mount /dev/vgdemo/lvdata /partition/data thì chỉ được tạm thời tức là khi ta restart lại máy thì phải mount bằng tay lần nữa để không phải mất thời gian trong quá trình mount ta sẽ thực hiện như sau: <br>
+ #vi /etc/fstab chèn dòng sau vào file:<br>
+
+> /dev/vgdemo/lvdata       /partition/data  ext3  defaults 0 0 <br> 
+> Sau đó lưu lại là được. Bạn có thể restart để test lại chức năng.<br>
+
