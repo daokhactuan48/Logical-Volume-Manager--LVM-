@@ -34,14 +34,12 @@ Sau khi nhập vào #lsblk bạn sẽ thấy được 2 hard drives đã có là
 
 **B2:  Tạo partition bằng cậu lệnh fdisk /dev/sdb và fdisk /dev/sdc**
 1.	Tạo partition trong /dev/sdb:
-> Command (m for help): n
-
-> Partition type:
-
->    p   primary (0 primary, 0 extended, 4 free)
->    e   extended
-> Select (default p): p
-> Partition number (1-4, default 1): 1
-> First sector (2048-20971519, default 2048):
-> Using default value 2048> 
-> Last sector, +sectors or +size{K,M,G} (2048-20971519, default 20971519): +5G
+> Command (m for help): n  <br>
+> Partition type: <br>
+>    p   primary (0 primary, 0 extended, 4 free)<br>
+>    e   extended<br>
+> Select (default p): p<br>
+> Partition number (1-4, default 1): 1<br>
+> First sector (2048-20971519, default 2048):<br>
+> Using default value 2048> <br>
+> Last sector, +sectors or +size{K,M,G} (2048-20971519, default 20971519): +5G<br>
