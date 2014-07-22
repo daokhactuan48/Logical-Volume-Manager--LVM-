@@ -29,7 +29,9 @@ Hướng Dẫn Tạo LVM
 > sdc      8:32   0    10G  0 disk <br>
 > sr0     11:0    1   665M  0 rom <br>
 
-Sau khi nhập vào #lsblk bạn sẽ thấy được 2 hard drives đã có là: sdb và sdc
+Sau khi nhập vào #lsblk bạn sẽ thấy được 2 hard drives đã có là: sdb và sdc.
+
+Sau khi kiểm tra xong bạn cài đặt thêm gói lvm2 vào với lệnh sau: # apt-get install lvm2
 
 **B2:  Tạo partition bằng cậu lệnh: #fdisk /dev/sdb**
 
