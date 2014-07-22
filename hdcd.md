@@ -100,7 +100,7 @@ Sử dụng câu lệnh sau để tao physical volume: #pvcreate /dev/sdb1 và #
 
 **B6: Kiểm tra xem volume group đã có chưa bằng lệnh sau: #vgdisplay**
 
-> root@controller:~# <b>vgdisplay</b>
+> root@controller:~# <b>vgdisplay</b><br>
 >   --- Volume group ---<br>
 >   VG Name               vgdemo<br>
 >   System ID<br>
