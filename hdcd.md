@@ -278,7 +278,7 @@ Giảm kích cỡ file system xuống còn 5GB thôi
 
 **B5: Kiểm tra file system và logical volumes**
 
-> ** e2fsck -f /dev/vgdemo/lvdata**
+> **e2fsck -f /dev/vgdemo/lvdata**
 
 và 
 
