@@ -258,6 +258,37 @@ Hoàn thành quá trình tăng kích thước cho logical volumes kiểm tra l�
 
 ###4.2 Giảm kích thước cho logical volumes (Shrink Logical Volume)
 
+**B1: umount logical volumes mà muốn giảm kích thước.**
+
+> **umount /dev/vgdemo/lvdata**
+
+**B2: Kiểm tra file system**
+
+> **e2fsck -f /dev/vgdemo/lvdata**
+
+**B3: Giảm file system xuống kích cỡ mong muốn**
+ 
+> **resize2fs -p /dev/vgdemo/lvdata 5G**
+
+Giảm kích cỡ file system xuống còn 5GB thôi
+
+**B4: Giảm  kích thước của logical volumes**
+
+> **lvreduce -L 5G /dev/vgdemo/lvdata
+
+**B5: Kiểm tra file system và logical volumes**
+
+> ** e2fsck -f /dev/vgdemo/lvdata
+
+và 
+
+> **resize2fs -p /dev/vgdemo/lvdata** 
+
+**B6: Mount lại logical volumes**
+
+> **mount /dev/vgdemo/lvdata /partition/lvdata**
+
+Hoàn thành quá trình giảm kích cỡ volumes group!
 
 
 
