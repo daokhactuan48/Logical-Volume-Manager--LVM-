@@ -227,9 +227,9 @@ Có 3 tool được sử dụng cho việc tạo ra physical volumes, volume gro
 Chú ý: Mỗi lênh sau sẽ cần được đứng trước vg, pv, vl phụ thuộc vào bạn làm gì
 
 3 tool đó là:<br>
-> -resize: Có thể tăng hoặc giảm physical volumes và logical volumes nhưng ko được dùng cho volumes groups<br>
-> -extend: Có thể làm cho volumes groups và logical volumes tăng lên nhưng không giảm<br>
-> -reduce: Có thể làm cho volumes groups và logical volumes giảm đi nhưng không tăng lên<br>
+> - resize: Có thể tăng hoặc giảm physical volumes và logical volumes nhưng ko được dùng cho volumes groups<br>
+> - extend: Có thể làm cho volumes groups và logical volumes tăng lên nhưng không giảm<br>
+> - reduce: Có thể làm cho volumes groups và logical volumes giảm đi nhưng không tăng lên<br>
 
 ###4.1 Tăng thêm kích thước cho logical volumes (Extend Logical Volumes)
 
