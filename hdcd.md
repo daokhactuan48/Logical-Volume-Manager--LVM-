@@ -226,10 +226,10 @@ Có 3 tool được sử dụng cho việc tạo ra physical volumes, volume gro
 
 Chú ý: Mỗi lênh sau sẽ cần được đứng trước vg, pv, vl phụ thuộc vào bạn làm gì
 
-3 tool đó là:
-> -resize: Có thể tăng hoặc giảm physical volumes và logical volumes nhưng ko được dùng cho volumes groups
-> -extend: Có thể làm cho volumes groups và logical volumes tăng lên nhưng không giảm
-> -reduce: Có thể làm cho volumes groups và logical volumes giảm đi nhưng không tăng lên
+3 tool đó là:<br>
+> -resize: Có thể tăng hoặc giảm physical volumes và logical volumes nhưng ko được dùng cho volumes groups<br>
+> -extend: Có thể làm cho volumes groups và logical volumes tăng lên nhưng không giảm<br>
+> -reduce: Có thể làm cho volumes groups và logical volumes giảm đi nhưng không tăng lên<br>
 
 ###4.1 Tăng thêm kích thước cho logical volumes (Extend Logical Volumes)
 
@@ -238,6 +238,7 @@ Trong mục 2 tiến hành cài đăt logical volumes tại bước 3 ta đã t�
 **B1: Tăng kích thước của volumes group bằng cách thêm physical volumes /dev/sdc1**<br>
 > -**# vgextend vgdemo /dev/sdc1** <br>
 Với cú pháp này ta hiểu như sau:
+
 vgdemo: Volumes group mà bạn muốn tăng kích thước<br>
 /dev/sdc1 physical volumes mà muốn add vào volumes group<br>
 
