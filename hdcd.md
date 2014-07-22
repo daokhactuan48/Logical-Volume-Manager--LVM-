@@ -236,7 +236,7 @@ Chú ý: Mỗi lênh sau sẽ cần được đứng trước vg, pv, vl phụ t
 Trong mục 2 tiến hành cài đăt logical volumes tại bước 3 ta đã tạo ra 1 physical volumes là: /dev/sdc1. Sử dung /dev/sdc1 để mở rộng logical volumes.
 
 **B1: Tăng kích thước của volumes group bằng cách thêm physical volumes /dev/sdc1**<br>
-   # vgextend vgdemo /dev/sdc1 <br>
+> -**# vgextend vgdemo /dev/sdc1** <br>
 Với cú pháp này ta hiểu như sau:
 > -vgdemo: Volumes group mà bạn muốn tăng kích thước<br>
 > -/dev/sdc1 physical volumes mà muốn add vào volumes group<br>
