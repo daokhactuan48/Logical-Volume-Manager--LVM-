@@ -69,7 +69,7 @@ Sử dụng câu lệnh sau để tao physical volume: #pvcreate /dev/sdb1 và #
 
 **B4: Kiểm tra xem physical volume đã có chưa bằng lệnh sau: #pvdisplay**
 
-> root@controller:~#<b> pvdisplay</br>
+> root@controller:~#<b> pvdisplay</b><br>
 >   "/dev/sdb1" is a new physical volume of "5.00 GiB"<br>
 >   --- NEW Physical volume ---<br>
 >   PV Name               /dev/sdb1<br>
