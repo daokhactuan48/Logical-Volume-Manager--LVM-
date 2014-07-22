@@ -122,9 +122,9 @@ Sử dụng câu lệnh sau để tao physical volume: #pvcreate /dev/sdb1 và #
 >   Free  PE / Size       1279 / 5.00 GiB<br>
 >   VG UUID               vlL9ON-E63w-MdSZ-fxjJ-YO5U-L1cF-UrydJO<br>
 
-**B7: Tạo logical volume: #lvcreate**
+**B7: Tạo logical volume: #lvcreate**<br>
 
-> root@controller:~# <b>lvcreate -L 3GB -n lvdata vgdemo</br>
+> root@controller:~# <b>lvcreate -L 3GB -n lvdata vgdemo</b><br>
 >   Logical volume "lvdata" created
 
 -L:  Chỉ ra dung lượng của logical volume <br>
