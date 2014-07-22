@@ -243,15 +243,15 @@ Với cú pháp này ta hiểu như sau:
 
 B2: Tăng kích thước cho logical volumes:
 
-# lvextend -L 8G /dev/vgdemo/lvdata
+ # lvextend -L 8G /dev/vgdemo/lvdata
 
 Hoặc
 
-# lvextend -L +5G /dev/vgdemo/lvdata
+ # lvextend -L +5G /dev/vgdemo/lvdata
 
 B3: Sau khi tăng kích thước cho logical volumes thì logical volumes đã được tăng là 8G nhưng file system trên volumes này vẫn sẽ là 3G bạn phải sử dụng lệnh sau để thay đổi
 
-# resize2fs /dev/vgdemo/lvdata
+ # resize2fs /dev/vgdemo/lvdata
 
 Hoàn thành quá trình tăng kích thước cho logical volumes kiểm tra lại lệnh: # df -h xem đã đúng chưa.
 
