@@ -10,7 +10,7 @@ Hướng Dẫn Tạo LVM
 <br>
 <p align="center"><img src="http://i.imgur.com/9rNADx4.png"></p>
 
-##II. Các bước tiến hành 
+##II. Tiến hành cài đặt 1 logical volumes 
 **Trong bài này mình sẽ đặt tên các volume group, logical volume được như sau:**
 > - Volume group: vgdemo
 > - logical volume: lvdata
@@ -218,6 +218,55 @@ B2: Xóa logical volumes
 
  #pvremove /dev/sdb1<br>
  Kiểm tra lại xem physical volumes đã được xóa chưa: #vgdisplay<br>
+
+
+##IV. Tăng và giảm kích thước trong logical volumes
+
+Có 3 tool được sử dụng cho việc tạo ra physical volumes, volume group, và logical volumes tăng lên hoặc giảm đi 
+
+Chú ý: Mỗi lênh sau sẽ cần được đứng trước vg, pv, vl phụ thuộc vào bạn làm gì
+
+3 tool đó là:
+> -resize: Có thể tăng hoặc giảm physical volumes và logical volumes nhưng ko được dùng cho volumes groups
+> -extend: Có thể làm cho volumes groups và logical volumes tăng lên nhưng không giảm
+> -reduce: Có thể làm cho volumes groups và logical volumes giảm đi nhưng không tăng lên
+
+###4.1 Tăng thêm kích thước cho logical volumes (Extend Logical Volumes)
+
+Trong mục 2 tiến hành cài đăt logical volumes tại bước 3 ta đã tạo ra 1 physical volumes là: /dev/sdc1. Sử dung /dev/sdc1 để mở rộng logical volumes.
+
+B1: Tăng kích thước của volumes group bằng cách thêm physical volumes /dev/sdc1 <br>
+   # vgextend vgdemo /dev/sdc1 <br>
+Với cú pháp này ta hiểu như sau:
+> -vgdemo: Volumes group mà bạn muốn tăng kích thước
+> -/dev/sdc1 physical volumes mà muốn add vào volumes group
+
+B2: Tăng kích thước cho logical volumes:
+
+# lvextend -L 8G /dev/vgdemo/lvdata
+
+Hoặc
+
+# lvextend -L +5G /dev/vgdemo/lvdata
+
+B3: Sau khi tăng kích thước cho logical volumes thì logical volumes đã được tăng là 8G nhưng file system trên volumes này vẫn sẽ là 3G bạn phải sử dụng lệnh sau để thay đổi
+
+# resize2fs /dev/vgdemo/lvdata
+
+Hoàn thành quá trình tăng kích thước cho logical volumes kiểm tra lại lệnh: # df -h xem đã đúng chưa.
+
+###4.2 Giảm kích thước cho logical volumes (Shrink Logical Volume)
+
+
+
+
+
+
+
+
+
+
+
 
 
 
